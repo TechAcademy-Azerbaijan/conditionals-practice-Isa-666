@@ -4,16 +4,15 @@ prompt.start();
 
 prompt.get('input', function (err, result) {
   
-   let n=result.input; //2322
-   let a=parseInt(n/1000); //2
-   let b=parseInt((n/100)%10); //3
-  let c=parseInt(n/10)%10; //2
-let d=parseInt(n%10); //2
+    let input = result.input;
+    let n = input.split('');
+    let a = parseInt(n[0]); //2
+    let b = parseInt(n[1]); //3
+    let c = parseInt(n[2]); //2
+   
+   let d = parseInt(n[3]);  //2
 
-if (a+b>=c+d) {
-  console.log('YES');
-}else if (a+d<=c+b || a+d>=c+b) {
-  console.log('NO');
-}
-  
+   if (a==b && a==c && a!==d || b==c && b==d && b!==a || c==a && c==d && c!==b || d==a && d==b && d==a && d!==c) {
+    console.log('YES');
+   }else {console.log('NO');}
 });
