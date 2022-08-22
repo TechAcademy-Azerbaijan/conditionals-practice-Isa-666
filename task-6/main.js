@@ -12,7 +12,7 @@ prompt.get('input', function (err, result) {
 
  if (a%2==0 && b%2==0 && c%2==0 && d%2==0) {console.log('YES');
     
- }else if (a%2!==0 || b%2!==0 || c%2!==0 || d%2!==0) {console.log('NO');
+ }else {console.log('NO');
     
 }
   
